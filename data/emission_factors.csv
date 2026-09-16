@@ -1,0 +1,8 @@
+category,activity,factor,unit,source
+Transport,Petrol Car,0.170,km,DEFRA 2023
+Transport,Diesel Car,0.171,km,DEFRA 2023
+Transport,Bus,0.096,km,DEFRA 2023
+Electricity,Grid Electricity,0.820,kWh,CEA India 2023
+Waste,Landfill Waste,0.446,kg,DEFRA 2023
+Waste,Recycled Paper,0.021,kg,DEFRA 2023
+Water,Tap Water Supply,0.149,m3,DEFRA 2023
