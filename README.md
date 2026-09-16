@@ -86,9 +86,7 @@ Compiled binaries (`bin/`) are decoupled from source files and excluded via `.gi
 
 ```text
 TerraGauge/
-│
-├── .vscode/                     # Editor configuration
-│
+│                 
 ├── data/
 │   └── emission_factors.csv     # Documented emission baseline dataset
 │
