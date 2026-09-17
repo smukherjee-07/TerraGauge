@@ -111,7 +111,7 @@ An integrated verification suite (`TerraGaugeTest.java`) validating activity cre
 
 | Layer | Technology | Rationale |
 | --- | --- | --- |
-| Language | Core Java (JDK 17+) | Strong typing, mature concurrency model, no runtime beyond the JVM |
+| Language | Core Java (JDK 25+) | Strong typing, mature concurrency model, no runtime beyond the JVM |
 | Persistence | MySQL 8.x | ACID guarantees, declarative constraints, portable SQL |
 | Connectivity | JDBC with `PreparedStatement` | Parameterized queries; injection-safe by construction |
 | Concurrency | `ExecutorService`, `Callable`, `Future` | Bounded parallelism over an I/O-and-CPU mixed workload |

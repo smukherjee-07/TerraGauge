@@ -49,7 +49,7 @@ Persistent transactional data is managed through a normalized MySQL database, wh
 
 | Category | Technology |
 |---|---|
-| **Language** | Java 17+ (Core Java, Concurrency, OOP) |
+| **Language** | Java 25+ (Core Java, Concurrency, OOP) |
 | **Database** | MySQL Server 8.0+ |
 | **Connectivity** | JDBC via MySQL Connector/J (`mysql-connector-j-*.jar`) |
 | **Data Format** | CSV — reference emission factor dataset |

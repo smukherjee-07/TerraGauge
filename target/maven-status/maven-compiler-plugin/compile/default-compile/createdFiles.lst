@@ -1,0 +1,10 @@
+Main.class
+ReportManager.class
+ImpactRecord.class
+User.class
+ActivityManager.class
+Activity.class
+DatabaseManager.class
+EmissionFactor.class
+ActivityCategory.class
+ImpactCalculator.class
