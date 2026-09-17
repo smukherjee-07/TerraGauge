@@ -14,27 +14,6 @@
 
 ---
 
-## 📖 Table of Contents
-
-- [Project Overview](#-project-overview)
-- [Features](#-features)
-- [Technologies & Tools Used](#-technologies--tools-used)
-- [Project Structure](#-project-structure)
-- [Installation & Setup](#-installation--setup)
-  - [1. Prerequisites](#1-prerequisites)
-  - [2. Clone the Repository](#2-clone-the-repository)
-  - [3. Install the JDBC Driver](#3-install-the-jdbc-driver)
-  - [4. Set Up the Database](#4-set-up-the-database)
-  - [5. Configure Credentials](#5-configure-credentials)
-- [Running the Application](#-running-the-application)
-- [Emission Factor Dataset](#-emission-factor-dataset)
-- [Testing](#-testing)
-- [Sample CLI Session](#-sample-cli-session)
-- [Troubleshooting](#-troubleshooting)
-- [Data Sources & Attribution](#-data-sources--attribution)
-
----
-
 ## 🧭 Project Overview
 
 Tracking greenhouse gas emissions has become essential for organizations, academic institutions, and eco-conscious individuals aiming to baseline and reduce their environmental impact. Existing commercial platforms, however, typically demand heavy web interfaces, proprietary cloud subscriptions, or external IoT sensor networks — and hide their conversion arithmetic behind closed-source pipelines.
@@ -86,9 +65,7 @@ Compiled binaries (`bin/`) are decoupled from source files and excluded via `.gi
 
 ```text
 TerraGauge/
-│
-├── .vscode/                     # Editor configuration
-│
+│                 
 ├── data/
 │   └── emission_factors.csv     # Documented emission baseline dataset
 │
