@@ -2,6 +2,12 @@
 .env.*
 !.env.example
 
+# Maven build output
+target/
+
+# GitHub metadata
+.github/
+
 # VS Code
 .vscode/
 !.vscode/extensions.json
