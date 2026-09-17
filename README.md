@@ -65,7 +65,9 @@ Compiled binaries (`bin/`) are decoupled from source files and excluded via `.gi
 
 ```text
 TerraGauge/
-│                 
+│
+├── pom.xml
+│                
 ├── data/
 │   └── emission_factors.csv     # Documented emission baseline dataset
 │
