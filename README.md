@@ -63,39 +63,59 @@ Persistent transactional data is managed through a normalized MySQL database, wh
 
 Compiled binaries (`bin/`) are decoupled from source files and excluded via `.gitignore`:
 
+## Repository Structure
+
 ```text
 TerraGauge/
 │
-├── pom.xml
-│                
+├── Design Diagrams/
+│   ├── Class_Diagram.png             # Complete 10-class OOP structural model
+│   ├── Entity-Relationship(ER)_Diagram.png # Relational schema with cascade rules
+│   ├── Sequence_Diagram.png          # Chronological multithreaded batch pipeline calls
+│   ├── System_Architecture.png       # 3-tier architectural flow diagram
+│   ├── Use_Case_Diagram.png          # Functional user and system interactions
+│   └── Workflow_Diagram.png          # End-to-end data lifecycle and validation flow
+│
+├── Sample Outputs/
+│   ├── Activity_ledger.png           # Formatted tabular audit register (Option 2)
+│   ├── CLI_Main_Menu.png             # ANSI-styled interactive terminal controls
+│   ├── Concurrent_calculation.png    # Multithreaded batch processing execution (Option 5)
+│   ├── Report_Analytical.png         # Footprint dashboard and top pollution drivers (Option 6)
+│   └── Terminate_Session.png         # Clean application shutdown sequence (Option 7)
+│
 ├── data/
-│   └── emission_factors.csv     # Documented emission baseline dataset
+│   └── emission_factors.csv          # Baseline conversion dataset (DEFRA & CEA India)
 │
 ├── database/
-│   └── schema.sql               # Relational DDL definitions and constraints
+│   └── schema.sql                    # Normalized schema for users, activities, and impacts
 │
 ├── lib/
-│   └── mysql-connector-j-*.jar  # MySQL JDBC connector driver
+│   └── mysql-connector-j-9.0.0.jar       # MySQL JDBC driver archive
 │
 ├── src/
-│   ├── Activity.java            # Activity domain entity
-│   ├── ActivityCategory.java    # Categorical enumeration
-│   ├── ActivityManager.java     # CRUD controller and business workflows
-│   ├── DatabaseManager.java     # JDBC singleton connection manager
-│   ├── EmissionFactor.java      # Reference emission factor entity
-│   ├── ImpactCalculator.java    # Factor resolver and concurrent batch engine
-│   ├── ImpactRecord.java        # Calculated carbon footprint entity
-│   ├── Main.java                # Interactive CLI presentation entry point
-│   ├── ReportManager.java       # Relational analytical query manager
-│   └── User.java                # Application user entity
+│   └── main/java/                    # Core application source classes
+│       ├── Main.java                 # Interactive CLI presentation controller
+│       ├── Activity.java             # Entity with validation checks
+│       ├── ActivityCategory.java     # Scope enumeration (Transport, Electricity, Waste, Water)
+│       ├── ActivityManager.java      # Service layer for JDBC CRUD operations
+│       ├── DatabaseManager.java      # Singleton JDBC connection factory
+│       ├── EmissionFactor.java       # Regulatory conversion baseline model
+│       ├── ImpactCalculator.java     # Concurrency pipeline (ExecutorService, Callable, Future)
+│       ├── ImpactRecord.java         # Computed footprint entity (kg CO2e)
+│       ├── ReportManager.java        # Aggregated analytics and reporting queries
+│       └── User.java                 # User profile domain entity
 │
 ├── test/
-│   └── TerraGaugeTest.java      # Validation and business logic test suite
+│   └── TerraGaugeTest.java           # Standalone automated verification suite
 │
-├── .env.example                 # Environment variable reference template
-├── .gitignore                   # Exclusion configuration for build binaries
-├── README.md                    # Repository documentation
-└── statement.md                 # Scope and problem statement document
+├── target/                           # Maven build targets and bytecode
+│
+├── .env.example                      # Template for database credentials
+├── .gitignore                        # Git exclusion rules
+├── pom.xml                           # Maven project configuration
+├── Project Report.pdf                # Complete 15-section academic project report
+├── README.md                         # Primary project documentation and walkthrough
+└── statement.md                      # Problem statement, scope, and feature specifications
 ```
 
 ### Layered Design
